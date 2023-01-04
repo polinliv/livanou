@@ -1,0 +1,17 @@
+sequence=input("eisagete mia akolouthia: ")
+codons=["ATG","TAA","TAG","TGA"]
+found_codon_positions = []
+
+n=len(sequence)
+k=0
+while k<n-2:
+      possible_codon=sequence[k:k+3]
+      if possible_codon in codons:
+       found_codon_positions.append(k)
+      k +=1
+
+print('extracted sequence:')
+print(sequence[found_codon_positions[0]:found_codon_positions[-1]+3])
+	   
+      
+     
